@@ -1,6 +1,6 @@
 ﻿namespace CinemaDomain
 {
-    public class IngressoItem
+    public class IngressoItem:BaseEbtity
     {
         public Ingresso Ingresso { get; set; }
 
