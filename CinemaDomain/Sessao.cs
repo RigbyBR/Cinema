@@ -1,6 +1,8 @@
-﻿namespace CinemaDomain
+﻿using CinemaDomain.Base;
+
+namespace CinemaDomain
 {
-    public class Sessao : BaseEbtity
+    public class Sessao : BaseEntity
     {
         public System.DateTime Data { get; set; }
 

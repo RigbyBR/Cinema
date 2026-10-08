@@ -1,6 +1,8 @@
-﻿namespace CinemaDomain
+﻿using CinemaDomain.Base;
+
+namespace CinemaDomain
 {
-    public class Genero : BaseEbtity
+    public class Genero : BaseEntity
     {
         public string Nome { get; set; }
 

@@ -1,6 +1,8 @@
-﻿namespace CinemaDomain
+﻿using CinemaDomain.Base;
+
+namespace CinemaDomain
 {
-    public class IngressoItem:BaseEbtity
+    public class IngressoItem:BaseEntity
     {
         public Ingresso Ingresso { get; set; }
 

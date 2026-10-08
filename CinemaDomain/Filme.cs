@@ -1,6 +1,8 @@
-﻿namespace CinemaDomain
+﻿using CinemaDomain.Base;
+
+namespace CinemaDomain
 {
-    public class Filme : BaseEbtity
+    public class Filme : BaseEntity
     {
         public string Nome { get; set; }
 

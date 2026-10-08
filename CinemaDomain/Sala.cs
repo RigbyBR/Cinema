@@ -1,6 +1,8 @@
-﻿namespace CinemaDomain
+﻿using CinemaDomain.Base;
+
+namespace CinemaDomain
 {
-    public class Sala : BaseEbtity
+    public class Sala : BaseEntity
     {
         public int Numero { get; set; }
 
