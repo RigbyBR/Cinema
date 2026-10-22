@@ -11,7 +11,7 @@ namespace CinemaReposytory.Mapping
             builder.ToTable("Ingresso");
             builder.HasKey(x => x.id);
             builder.Property(x => x.DataCompra);
-            builder.Property(x => x.Sessao);
+            builder.HasOne(x => x.Sessao);
             builder.Property(x => x.ValorTotal);
             builder.Property(x => x.FormaPagamento)
                 .HasMaxLength(100);

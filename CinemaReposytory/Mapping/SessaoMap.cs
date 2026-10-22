@@ -11,7 +11,7 @@ namespace CinemaReposytory.Mapping
             builder.ToTable("Sessao");
             builder.HasKey(x => x.id);
             builder.Property(x => x.Data);
-            builder.Property(x => x.Sala);
+            builder.HasOne(x => x.Sala);
             builder.Property(x => x.Preco);
 
 

@@ -36,11 +36,13 @@ namespace CinemaService.Base
 
         public TypeOutputModel ReadbyId<TypeOutputModel>(int id) where TypeOutputModel : class
         {
-            throw new NotImplementedException();
+            var entity = _baseRepository.ReadbyId(id);
+            return _mapper.Map<TypeOutputModel>(entity);
         }
         public IEnumerable<TypeOutputModel> ReadAll<TypeOutputModel>() where TypeOutputModel : class
         {
-            throw new NotImplementedException();
+            var entitles = _baseRepository.ReadAll();
+            return entitles.Select(e => _mapper.Map<TypeOutputModel>(e));
         }
 
         public TypeOutputModel Upgrade<TypeInputModel, TypeOutputModel, TypeValidator>(TypeEntity entity)
@@ -48,12 +50,16 @@ namespace CinemaService.Base
             where TypeOutputModel : class
             where TypeValidator : AbstractValidator<TypeEntity>
         {
-            throw new NotImplementedException();
+            var e = _mapper.Map<TypeEntity>(entity);
+            Validate(e, Activator.CreateInstance<TypeValidator>());
+            _baseRepository.Update(e);
+            return _mapper.Map<TypeOutputModel>(e);
+            
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _baseRepository.Delete(id);
         }
     }
 }

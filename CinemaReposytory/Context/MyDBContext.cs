@@ -13,7 +13,8 @@ namespace CinemaReposytory.Context
             public DbSet<Sessao> Sessao { get; set; }
             public DbSet<Ingresso> Ingresso { get; set; }
             public DbSet<IngressoItem> IngressoItem { get; set; }
-            public MyBDContext()
+            public MyBDContext(DbContextOptions<MyBDContext> options) : base(options) 
+           
             {
                 Database.EnsureCreated();
             }

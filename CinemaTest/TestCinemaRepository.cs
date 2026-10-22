@@ -16,7 +16,7 @@ namespace CinemaTest
             public DbSet<Sessao> Sessao { get; set; }
             public DbSet<Ingresso> Ingresso { get; set; }
             public DbSet<IngressoItem> IngressoItem { get; set; }
-            public MyBDContext()
+            public MyBDContext() 
             {
                 Database.EnsureCreated(); 
             }
@@ -50,11 +50,11 @@ namespace CinemaTest
         {
             using(var db = new MyBDContext())
             {
-                var genero = new Genero { id = 1, Nome = "Comédia" };
+                var genero = new Genero { id = 1, Nome = "Comedia" };
                 db.Genero.Add(genero);
                 genero = new Genero { id = 2, Nome = "Terror" };
                 db.Genero.Add(genero);
-                genero = new Genero { id = 3, Nome = "Ação" };
+                genero = new Genero { id = 3, Nome = "Acao" };
                 db.Genero.Add(genero);
                 db.SaveChanges();
             }

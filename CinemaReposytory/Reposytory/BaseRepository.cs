@@ -1,7 +1,7 @@
 ﻿using CinemaDomain.Base;
 using CinemaReposytory.Base;
 using CinemaReposytory.Context;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace CinemaReposytory.Reposytory
 {
